@@ -2,10 +2,10 @@ package main
 
 import (
 	"flag"
-	"lab-10/internal/hello/api"
-	"lab-10/internal/hello/config"
-	"lab-10/internal/hello/provider"
-	"lab-10/internal/hello/usecase"
+	"lab-10/internal/query/api"
+	"lab-10/internal/query/config"
+	"lab-10/internal/query/provider"
+	"lab-10/internal/query/usecase"
 	"log"
 
 	_ "github.com/lib/pq"
@@ -22,7 +22,7 @@ func main() {
 	}
 
 	prv := provider.NewProvider(cfg.DB.Host, cfg.DB.Port, cfg.DB.User, cfg.DB.DBname)
-	use := usecase.NewUsecase(cfg.Usecase.DefaultMessage, prv)
+	use := usecase.NewUsecase(cfg.Usecase.DefaultMessageQuery, prv)
 	srv := api.NewServer(cfg.IP, cfg.Port, cfg.API.MaxMessageSize, use)
 
 	srv.Run()

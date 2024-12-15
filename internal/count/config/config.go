@@ -2,11 +2,11 @@ package config
 
 type Config struct {
 	IP   string `yaml:"ip"`
-	Port int    `yaml:"port"`
+	Port int    `yaml:"port_count"`
 
 	API     api     `yaml:"api"`
 	Usecase usecase `yaml:"usecase"`
-	DB      db      `yaml:"db"`
+	DB      db      `yaml:"db_count"`
 }
 
 type api struct {
@@ -14,7 +14,7 @@ type api struct {
 }
 
 type usecase struct {
-	DefaultMessage string `yaml:"default_message"`
+	DefaultMessageCount int `yaml:"default_message_count"`
 }
 
 type db struct {

@@ -1,4 +1,4 @@
-module github.com/ValeryBMSTU/web-10
+module lab-10
 
 go 1.22.1
 
