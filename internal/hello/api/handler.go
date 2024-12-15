@@ -2,7 +2,7 @@ package api
 
 import (
 	"errors"
-	"github.com/ValeryBMSTU/web-10/pkg/vars"
+	"lab-10/pkg/vars"
 	"net/http"
 
 	"github.com/labstack/echo/v4"
